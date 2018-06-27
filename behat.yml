@@ -1,0 +1,16 @@
+default:
+    suites:
+        default:
+            path: features
+            contexts:
+                - FeatureContext
+    extensions:
+        Behat\MinkExtension:
+            sessions:
+                default:
+                    selenium2:
+                        wd_host: 'http://selenium-hub:4444/wd/hub'
+                        capabilities: {"browser": "chrome", "version": "*", marionette: true}
+            base_url: ''
+            javascript_session: default
+            browser_name: chrome
